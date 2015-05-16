@@ -1,0 +1,281 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.void_3.fourchess.FourChess"
+    android:id="@+id/ai_page"
+    android:background="@drawable/starton">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ai_back"
+        android:background="#00000000"
+        android:contentDescription="@string/gameback"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pic05" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/aibar"
+        android:baselineAligned="false"
+        android:paddingLeft="@dimen/radius"
+        android:paddingRight="@dimen/radius"
+        android:paddingBottom="@dimen/radius"
+        android:layout_below="@+id/ai_board"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/aishow"
+                android:textSize="18sp"
+                android:shadowColor="#7e000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:gravity="center"
+                android:textColor="#ff00ff28" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/aiyes"
+                    android:layout_weight="1"
+                    android:background="@drawable/game_set"
+                    android:textColor="#ff0076ff"
+                    android:textSize="18sp"
+                    android:singleLine="true"
+                    android:layout_margin="3dp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/aino"
+                    android:layout_weight="1"
+                    android:background="@drawable/paly_chess"
+                    android:textColor="#ffffaa3e"
+                    android:textSize="18sp"
+                    android:layout_margin="3dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="2">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/airetract"
+                android:src="@drawable/reset"
+                android:background="#00000000"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/retract"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <cn.void_3.fourchess.FlowRadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/ai_board"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bigboard">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/yui00"
+                android:layout_weight="1"
+                style="@style/radiobutton"
+                android:background="@drawable/red_chess"
+                android:layout_margin="15dp"
+                android:onClick="ChessClick" />
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/yui01"
+                android:layout_weight="1"
+                style="@style/radiobutton"
+                android:background="@drawable/red_chess"
+                android:layout_margin="15dp"
+                android:onClick="ChessClick" />
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/yui02"
+                android:layout_weight="1"
+                style="@style/radiobutton"
+                android:background="@drawable/red_chess"
+                android:layout_margin="15dp"
+                android:onClick="ChessClick" />
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/yui03"
+                android:layout_weight="1"
+                style="@style/radiobutton"
+                android:background="@drawable/red_chess"
+                android:layout_margin="15dp"
+                android:onClick="ChessClick" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/yui10"
+                android:layout_weight="1"
+                style="@style/radiobutton"
+                android:background="@drawable/red_chess"
+                android:layout_margin="15dp"
+                android:onClick="ChessClick" />
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/yui11"
+                android:layout_weight="1"
+                style="@style/radiobutton"
+                android:background="@drawable/red_chess"
+                android:layout_margin="15dp"
+                android:onClick="ChessClick" />
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/yui12"
+                android:layout_weight="1"
+                style="@style/radiobutton"
+                android:background="@drawable/red_chess"
+                android:layout_margin="15dp"
+                android:onClick="ChessClick" />
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/yui13"
+                android:layout_weight="1"
+                style="@style/radiobutton"
+                android:background="@drawable/red_chess"
+                android:layout_margin="15dp"
+                android:onClick="ChessClick" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/yui20"
+                android:layout_weight="1"
+                style="@style/radiobutton"
+                android:background="@drawable/red_chess"
+                android:layout_margin="15dp"
+                android:onClick="ChessClick" />
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/yui21"
+                android:layout_weight="1"
+                style="@style/radiobutton"
+                android:background="@drawable/red_chess"
+                android:layout_margin="15dp"
+                android:onClick="ChessClick" />
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/yui22"
+                android:layout_weight="1"
+                style="@style/radiobutton"
+                android:background="@drawable/red_chess"
+                android:layout_margin="15dp"
+                android:onClick="ChessClick" />
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/yui23"
+                android:layout_weight="1"
+                style="@style/radiobutton"
+                android:background="@drawable/red_chess"
+                android:layout_margin="15dp"
+                android:onClick="ChessClick" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/yui30"
+                android:layout_weight="1"
+                style="@style/radiobutton"
+                android:background="@drawable/red_chess"
+                android:layout_margin="15dp"
+                android:onClick="ChessClick" />
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/yui31"
+                android:layout_weight="1"
+                style="@style/radiobutton"
+                android:background="@drawable/red_chess"
+                android:layout_margin="15dp"
+                android:onClick="ChessClick" />
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/yui32"
+                android:layout_weight="1"
+                style="@style/radiobutton"
+                android:background="@drawable/red_chess"
+                android:layout_margin="15dp"
+                android:onClick="ChessClick" />
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/yui33"
+                android:layout_weight="1"
+                style="@style/radiobutton"
+                android:background="@drawable/red_chess"
+                android:layout_margin="15dp"
+                android:onClick="ChessClick" />
+        </LinearLayout>
+
+    </cn.void_3.fourchess.FlowRadioGroup>
+
+</RelativeLayout>

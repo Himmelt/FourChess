@@ -78,11 +78,17 @@ ADDED from AndroidManifest.xml:30:9
 activity#cn.void_3.fourchess.About
 ADDED from AndroidManifest.xml:35:9
 	android:label
-		ADDED from AndroidManifest.xml:38:13
-	android:theme
 		ADDED from AndroidManifest.xml:37:13
+	android:theme
+		ADDED from AndroidManifest.xml:38:13
 	android:name
 		ADDED from AndroidManifest.xml:36:13
+activity#cn.void_3.fourchess.AIChess
+ADDED from AndroidManifest.xml:40:9
+	android:label
+		ADDED from AndroidManifest.xml:42:13
+	android:name
+		ADDED from AndroidManifest.xml:41:13
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from com.android.support:appcompat-v7:21.0.2:15:5

@@ -39,6 +39,8 @@ public class FourChess extends Activity {
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         params.height=h;params.addRule(RelativeLayout.CENTER_IN_PARENT);
         chessboard.setLayoutParams(params);
+
+
         ImageView show=(ImageView)findViewById(R.id.game_back);
         Drawable background=Drawable.createFromPath(Welcome.getSDPath() + "/Android/data/cn.void_3.fourchess/missyou.png");
         show.setImageDrawable(background);

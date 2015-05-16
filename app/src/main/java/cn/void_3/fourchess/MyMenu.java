@@ -12,9 +12,11 @@ import android.widget.ImageView;
 public class MyMenu extends Activity {
 
     public void GameClick(View v){
-
-
         Intent intent=new Intent(this,FourChess.class);
+        this.startActivity(intent);
+    }
+    public void AIClick(View v){
+        Intent intent=new Intent(this,AIChess.class);
         this.startActivity(intent);
     }
     public void AboutClick(View v){
