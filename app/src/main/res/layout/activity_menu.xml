@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.void_3.fourchess.Menu"
+    android:id="@+id/menu_page"
+    android:background="@drawable/starton">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/menu_back"
+        android:contentDescription="@string/menuback"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:background="#00000000"
+        android:src="@drawable/pic03"
+        android:scaleType="centerCrop" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="@string/aboutgame"
+        android:id="@+id/about_set_btn"
+        android:layout_below="@+id/game_set_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/about_game"
+        android:textSize="18sp"
+        android:shadowColor="#7e000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:textStyle="bold"
+        android:onClick="AboutClick" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="@string/gamesettings"
+        android:id="@+id/game_set_btn"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/game_set"
+        android:textSize="18sp"
+        android:shadowColor="#7e000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="@string/playchess"
+        android:id="@+id/play_set_btn"
+        android:layout_above="@+id/game_set_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/paly_chess"
+        android:textSize="18sp"
+        android:shadowColor="#7e000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:textStyle="bold"
+        android:onClick="GameClick" />
+</RelativeLayout>

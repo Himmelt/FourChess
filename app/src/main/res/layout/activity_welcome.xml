@@ -1,0 +1,45 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Welcome"
+    android:id="@+id/welcome"
+    android:background="@drawable/starton">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/welback"
+        android:scaleType="centerCrop"
+        android:background="#00000000"
+        android:src="@drawable/pic01" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/app_name"
+        android:id="@+id/icon"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#e500b8ff"
+        android:textSize="38sp"
+        android:textStyle="normal"
+        android:shadowColor="#ff000000"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="4"
+        android:singleLine="true" />
+
+    <view
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        class="cn.void_3.fourchess.NumberProgressBar"
+        android:id="@+id/loading"
+        style="@style/NumberProgressBar_Beauty_Red"
+        android:layout_below="@+id/icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp" />
+
+</RelativeLayout>
