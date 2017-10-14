@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cn.void_3.fourchess.FourChess"
+    tools:context="org.soraworld.fourchess.FourChess"
     android:id="@+id/ai_page"
     android:background="@drawable/starton">
 
@@ -99,7 +99,7 @@
         </LinearLayout>
     </LinearLayout>
 
-    <cn.void_3.fourchess.FlowRadioGroup
+    <org.soraworld.fourchess.FlowRadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -276,6 +276,6 @@
                 android:onClick="ChessClick" />
         </LinearLayout>
 
-    </cn.void_3.fourchess.FlowRadioGroup>
+    </org.soraworld.fourchess.FlowRadioGroup>
 
 </RelativeLayout>

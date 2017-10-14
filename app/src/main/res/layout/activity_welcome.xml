@@ -30,12 +30,12 @@
         android:shadowDx="3"
         android:shadowDy="3"
         android:shadowRadius="4"
-        android:singleLine="true" />
+        android:maxLines="1" />
 
     <view
         android:layout_width="300dp"
         android:layout_height="20dp"
-        class="cn.void_3.fourchess.NumberProgressBar"
+        class="org.soraworld.fourchess.NumberProgressBar"
         android:id="@+id/loading"
         style="@style/NumberProgressBar_Beauty_Red"
         android:layout_below="@+id/icon"

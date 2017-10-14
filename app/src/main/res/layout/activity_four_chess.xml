@@ -1,370 +1,389 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/game_page"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cn.void_3.fourchess.FourChess"
-    android:id="@+id/game_page"
-    android:background="@drawable/starton">
+    android:background="@drawable/starton"
+    tools:context="org.soraworld.fourchess.FourChess">
 
     <ImageView
+        android:id="@+id/game_back"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/game_back"
         android:background="#00000000"
         android:contentDescription="@string/gameback"
         android:scaleType="centerCrop"
         android:src="@drawable/pic05" />
 
     <LinearLayout
-        android:orientation="horizontal"
+        android:id="@+id/bluebar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/bluebar"
-        android:baselineAligned="false"
-        android:paddingLeft="@dimen/radius"
-        android:paddingRight="@dimen/radius"
-        android:paddingBottom="@dimen/radius"
-        android:layout_below="@+id/chess_board"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/chess_board"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/radius"
+        android:paddingLeft="@dimen/radius"
+        android:paddingRight="@dimen/radius">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <TextView
+                android:id="@+id/blueshow"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/blueshow"
-                android:textSize="18sp"
+                android:layout_weight="1"
+                android:gravity="center"
                 android:shadowColor="#7e000000"
                 android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="2"
-                android:layout_weight="1"
                 android:singleLine="true"
-                android:gravity="center"
-                android:textColor="#ff00ff28" />
+                android:textColor="#ff00ff28"
+                android:textSize="18sp" />
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/blueyes"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/blueyes"
+                    android:layout_margin="3dp"
                     android:layout_weight="1"
                     android:background="@drawable/game_set"
                     android:onClick="BlueAgreeRetract"
-                    android:textColor="#ff0076ff"
-                    android:textSize="18sp"
                     android:singleLine="true"
-                    android:layout_margin="3dp" />
+                    android:textColor="#ff0076ff"
+                    android:textSize="18sp" />
 
                 <Button
+                    android:id="@+id/blueno"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/blueno"
+                    android:layout_margin="3dp"
                     android:layout_weight="1"
                     android:background="@drawable/paly_chess"
                     android:onClick="RejectRetract"
                     android:textColor="#ffffaa3e"
-                    android:textSize="18sp"
-                    android:layout_margin="3dp" />
+                    android:textSize="18sp" />
             </LinearLayout>
 
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_weight="2">
+            android:layout_weight="2"
+            android:orientation="vertical">
 
             <ImageButton
+                android:id="@+id/retract"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/retract"
-                android:src="@drawable/reset"
                 android:background="#00000000"
-                android:scaleType="fitCenter"
                 android:contentDescription="@string/retract"
-                android:onClick="BlueRequest"/>
+                android:onClick="BlueRequest"
+                android:scaleType="fitCenter"
+                android:src="@drawable/reset" />
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
+        android:id="@+id/redbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/redbar"
-        android:baselineAligned="false"
-        android:rotation="180"
-        android:paddingLeft="@dimen/radius"
-        android:paddingRight="@dimen/radius"
-        android:paddingBottom="@dimen/radius"
-        android:paddingEnd="@dimen/radius"
         android:layout_above="@+id/chess_board"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true">
+        android:layout_alignParentTop="true"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/radius"
+        android:paddingEnd="@dimen/radius"
+        android:paddingLeft="@dimen/radius"
+        android:paddingRight="@dimen/radius"
+        android:rotation="180">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_weight="1" >
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <TextView
+                android:id="@+id/redshow"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/redshow"
-                android:textSize="18sp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:singleLine="true"
                 android:shadowColor="#7e000000"
                 android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="2"
-                android:textColor="#ff00ff28" />
+                android:singleLine="true"
+                android:textColor="#ff00ff28"
+                android:textSize="18sp" />
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_weight="1" >
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/redyes"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/redyes"
+                    android:layout_margin="3dp"
                     android:layout_weight="1"
                     android:background="@drawable/paly_chess"
                     android:onClick="RedAgreeRetract"
                     android:textColor="#ffffaa3e"
-                    android:textSize="18sp"
-                    android:layout_margin="3dp" />
+                    android:textSize="18sp" />
 
                 <Button
+                    android:id="@+id/redno"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/redno"
+                    android:layout_margin="3dp"
                     android:layout_weight="1"
                     android:background="@drawable/game_set"
                     android:onClick="RejectRetract"
                     android:textColor="#ff0076ff"
-                    android:textSize="18sp"
-                    android:layout_margin="3dp" />
+                    android:textSize="18sp" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_weight="2" >
+            android:layout_weight="2"
+            android:orientation="vertical">
 
             <ImageButton
+                android:id="@+id/restart"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/restart"
-                android:src="@drawable/reset"
-                android:scaleType="fitCenter"
                 android:background="#00000000"
                 android:contentDescription="@string/restart"
-                android:onClick="RedRequest" />
+                android:onClick="RedRequest"
+                android:scaleType="fitCenter"
+                android:src="@drawable/reset" />
         </LinearLayout>
     </LinearLayout>
 
-    <cn.void_3.fourchess.FlowRadioGroup
+    <org.soraworld.fourchess.FlowRadioGroup
+        android:id="@+id/chess_board"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/chess_board"
         android:layout_centerInParent="true"
-        android:background="@drawable/bigboard">
+        android:background="@drawable/bigboard"
+        android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:orientation="horizontal"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_height="match_parent">
+            android:orientation="horizontal">
+
             <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
                 android:id="@+id/chess00"
-                android:layout_weight="1"
                 style="@style/radiobutton"
-                android:background="@drawable/red_chess"
-                android:onClick="ChessClick"
-                android:layout_margin="15dp" />
-            <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/red_chess"
+                android:onClick="ChessClick" />
+
+            <RadioButton
                 android:id="@+id/chess01"
-                android:layout_weight="1"
                 style="@style/radiobutton"
-                android:background="@drawable/red_chess"
-                android:onClick="ChessClick"
-                android:layout_margin="15dp" />
-            <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/red_chess"
+                android:onClick="ChessClick" />
+
+            <RadioButton
                 android:id="@+id/chess02"
-                android:layout_weight="1"
                 style="@style/radiobutton"
-                android:background="@drawable/red_chess"
-                android:onClick="ChessClick"
-                android:layout_margin="15dp" />
-            <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/red_chess"
+                android:onClick="ChessClick" />
+
+            <RadioButton
                 android:id="@+id/chess03"
-                android:layout_weight="1"
                 style="@style/radiobutton"
-                android:background="@drawable/red_chess"
-                android:onClick="ChessClick"
-                android:layout_margin="15dp" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_weight="1"
-            android:layout_height="match_parent">
-            <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/red_chess"
+                android:onClick="ChessClick" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RadioButton
                 android:id="@+id/chess10"
-                android:layout_weight="1"
                 style="@style/radiobutton"
-                android:background="@drawable/red_chess"
-                android:onClick="ChessClick"
-                android:layout_margin="15dp" />
-            <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/red_chess"
+                android:onClick="ChessClick" />
+
+            <RadioButton
                 android:id="@+id/chess11"
-                android:layout_weight="1"
                 style="@style/radiobutton"
-                android:background="@drawable/red_chess"
-                android:onClick="ChessClick"
-                android:layout_margin="15dp" />
-            <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/red_chess"
+                android:onClick="ChessClick" />
+
+            <RadioButton
                 android:id="@+id/chess12"
-                android:layout_weight="1"
                 style="@style/radiobutton"
-                android:background="@drawable/red_chess"
-                android:onClick="ChessClick"
-                android:layout_margin="15dp" />
-            <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/red_chess"
+                android:onClick="ChessClick" />
+
+            <RadioButton
                 android:id="@+id/chess13"
-                android:layout_weight="1"
                 style="@style/radiobutton"
-                android:background="@drawable/red_chess"
-                android:onClick="ChessClick"
-                android:layout_margin="15dp" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_weight="1"
-            android:layout_height="match_parent">
-            <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/red_chess"
+                android:onClick="ChessClick" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RadioButton
                 android:id="@+id/chess20"
-                android:layout_weight="1"
                 style="@style/radiobutton"
-                android:background="@drawable/red_chess"
-                android:onClick="ChessClick"
-                android:layout_margin="15dp" />
-            <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/red_chess"
+                android:onClick="ChessClick" />
+
+            <RadioButton
                 android:id="@+id/chess21"
-                android:layout_weight="1"
                 style="@style/radiobutton"
-                android:background="@drawable/red_chess"
-                android:onClick="ChessClick"
-                android:layout_margin="15dp" />
-            <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/red_chess"
+                android:onClick="ChessClick" />
+
+            <RadioButton
                 android:id="@+id/chess22"
-                android:layout_weight="1"
                 style="@style/radiobutton"
-                android:background="@drawable/red_chess"
-                android:onClick="ChessClick"
-                android:layout_margin="15dp" />
-            <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/chess23"
+                android:layout_margin="15dp"
                 android:layout_weight="1"
-                style="@style/radiobutton"
                 android:background="@drawable/red_chess"
-                android:onClick="ChessClick"
-                android:layout_margin="15dp" />
+                android:onClick="ChessClick" />
+
+            <RadioButton
+                android:id="@+id/chess23"
+                style="@style/radiobutton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/red_chess"
+                android:onClick="ChessClick" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:orientation="horizontal"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_height="match_parent">
+            android:orientation="horizontal">
+
             <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
                 android:id="@+id/chess30"
-                android:layout_weight="1"
                 style="@style/radiobutton"
-                android:background="@drawable/red_chess"
-                android:onClick="ChessClick"
-                android:layout_margin="15dp" />
-            <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/red_chess"
+                android:onClick="ChessClick" />
+
+            <RadioButton
                 android:id="@+id/chess31"
-                android:layout_weight="1"
                 style="@style/radiobutton"
-                android:background="@drawable/red_chess"
-                android:onClick="ChessClick"
-                android:layout_margin="15dp" />
-            <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/red_chess"
+                android:onClick="ChessClick" />
+
+            <RadioButton
                 android:id="@+id/chess32"
-                android:layout_weight="1"
                 style="@style/radiobutton"
-                android:background="@drawable/red_chess"
-                android:onClick="ChessClick"
-                android:layout_margin="15dp" />
-            <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/chess33"
+                android:layout_margin="15dp"
                 android:layout_weight="1"
-                style="@style/radiobutton"
                 android:background="@drawable/red_chess"
-                android:onClick="ChessClick"
-                android:layout_margin="15dp" />
+                android:onClick="ChessClick" />
+
+            <RadioButton
+                android:id="@+id/chess33"
+                style="@style/radiobutton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/red_chess"
+                android:onClick="ChessClick" />
         </LinearLayout>
 
-    </cn.void_3.fourchess.FlowRadioGroup>
+    </org.soraworld.fourchess.FlowRadioGroup>
 
 </RelativeLayout>
