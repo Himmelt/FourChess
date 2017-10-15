@@ -1,19 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_menu"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="org.soraworld.fourchess.MainActivity">
+    android:background="@drawable/starton"
+    tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/sample_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#00000000"
+        android:contentDescription="@string/menuback"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pic03"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/modePP"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/paly_chess"
+            android:onClick="GameClick"
+            android:text="@string/playchess"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="134dp"
+            tools:layout_editor_absoluteY="218dp" />
+
+        <Button
+            android:id="@+id/modeAI"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:background="@drawable/game_set"
+            android:onClick="AIClick"
+            android:text="@string/aimode"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="75dp"
+            tools:layout_editor_absoluteY="41dp" />
+
+    </GridLayout>
 
 </android.support.constraint.ConstraintLayout>

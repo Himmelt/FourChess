@@ -6,7 +6,7 @@ android {
             keyAlias 'FourChess'
             keyPassword 'mlkove@349521'
             storePassword 'mlkove@349521'
-            storeFile file('D:/Himmelt/Desktop/P/FourChess/app/FourChess.jks')
+            storeFile file('D:/Himmelt/Desktop/Project/FourChess/app/FourChess.jks')
         }
     }
     compileSdkVersion 26

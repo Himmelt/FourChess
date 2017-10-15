@@ -1,10 +1,10 @@
 #include <jni.h>
-#include <string>
 #include "AIChess.h"
 
+extern "C"
 JNIEXPORT jintArray JNICALL
-Java_org_soraworld_fourchess_AIChess_getSolution(JNIEnv *env, jobject instance,
-                                                 jintArray comp_in_) {
+Java_org_soraworld_fourchess_mode_AIActivity_getSolution(JNIEnv *env, jobject instance,
+                                                         jintArray comp_in_) {
     jint *comp_in = env->GetIntArrayElements(comp_in_, NULL);
 
     // TODO
@@ -30,13 +30,4 @@ Java_org_soraworld_fourchess_AIChess_getSolution(JNIEnv *env, jobject instance,
     //【传出解决方案】
     env->SetIntArrayRegion(comp_in_, 0, 16, native);
     return comp_in_;
-}
-
-extern "C"
-JNIEXPORT jstring JNICALL
-Java_org_soraworld_fourchess_MainActivity_stringFromJNI(
-        JNIEnv *env,
-        jobject /* this */) {
-    std::string hello = "Hello from C++";
-    return env->NewStringUTF(hello.c_str());
 }

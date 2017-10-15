@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/starton"
-    tools:context="org.soraworld.fourchess.FourChess">
+    tools:context="org.soraworld.fourchess.mode.PPActivity">
 
     <ImageView
         android:id="@+id/game_back"
@@ -129,20 +129,18 @@
                 android:id="@+id/redshow"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:gravity="center"
                 android:shadowColor="#7e000000"
                 android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="2"
-                android:singleLine="true"
                 android:textColor="#ff00ff28"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:maxLines="1" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
+                android:layout_height="0dp"
                 android:orientation="horizontal">
 
                 <Button
@@ -187,7 +185,7 @@
         </LinearLayout>
     </LinearLayout>
 
-    <org.soraworld.fourchess.FlowRadioGroup
+    <org.soraworld.fourchess.layout.FlowRadioGroup
         android:id="@+id/chess_board"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -384,6 +382,6 @@
                 android:onClick="ChessClick" />
         </LinearLayout>
 
-    </org.soraworld.fourchess.FlowRadioGroup>
+    </org.soraworld.fourchess.layout.FlowRadioGroup>
 
 </RelativeLayout>

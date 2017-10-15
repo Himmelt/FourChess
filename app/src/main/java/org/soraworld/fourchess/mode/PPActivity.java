@@ -1,8 +1,7 @@
-package org.soraworld.fourchess;
+package org.soraworld.fourchess.mode;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
-import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -10,13 +9,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class FourChess extends Activity {
+import org.soraworld.fourchess.R;
+
+public class PPActivity extends Activity {
 
     int FLAG, N = 10;
     Coordinate to_move;
@@ -31,7 +31,7 @@ public class FourChess extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_four_chess);
+        setContentView(R.layout.activity_pp);
 
         DisplayMetrics display = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(display);
@@ -42,10 +42,6 @@ public class FourChess extends Activity {
         params.addRule(RelativeLayout.CENTER_IN_PARENT);
         chessboard.setLayoutParams(params);
 
-
-        ImageView show = findViewById(R.id.game_back);
-        Drawable background = Drawable.createFromPath(Welcome.getSDPath() + "/Android/data/cn.void_3.fourchess/missyou.png");
-        show.setImageDrawable(background);
         //绑定
         Bunding();
         //初始化

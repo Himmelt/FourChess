@@ -1,4 +1,4 @@
-package org.soraworld.fourchess;
+package org.soraworld.fourchess.layout;
 
 import android.content.Context;
 import android.content.res.TypedArray;

@@ -1,4 +1,4 @@
-package org.soraworld.fourchess;
+package org.soraworld.fourchess.mode;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -11,15 +11,17 @@ import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import org.soraworld.fourchess.R;
 
-public class AIChess extends Activity {
+
+public class AIActivity extends Activity {
 
     Coordinate to_move;
     int yui_box[][] = new int[4][4];
     RadioButton yui_btn[][] = new RadioButton[4][4];
 
     static {
-        System.loadLibrary("AIChess");
+        //System.loadLibrary("ai-chess");
     }
 
     public native int[] getSolution(int comp_in[]);
@@ -39,7 +41,7 @@ public class AIChess extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_aichess);
+        setContentView(R.layout.activity_ai);
         DisplayMetrics display = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(display);
         int h = display.widthPixels;
@@ -268,10 +270,10 @@ public class AIChess extends Activity {
         return xy;
     }
 
-    class Coordinate {
+    private class Coordinate {
         private int x, y;
 
-        public void setXY(int setx, int sety) {
+        void setXY(int setx, int sety) {
             x = setx;
             y = sety;
         }
@@ -280,7 +282,7 @@ public class AIChess extends Activity {
             return x;
         }
 
-        public int getY() {
+        int getY() {
             return y;
         }
     }
