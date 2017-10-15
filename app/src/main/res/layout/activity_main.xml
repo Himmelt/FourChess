@@ -12,10 +12,8 @@
         android:id="@+id/background"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#00000000"
-        android:contentDescription="@string/menuback"
         android:scaleType="centerCrop"
-        android:src="@drawable/pic03"
+        android:src="@drawable/pic04"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -30,27 +28,27 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/modePP"
+            android:id="@+id/mode_pp"
             android:layout_width="150dp"
             android:layout_height="55dp"
             android:layout_marginBottom="40dp"
             android:background="@drawable/paly_chess"
             android:onClick="GameClick"
-            android:text="@string/playchess"
+            android:text="@string/mode_pp"
             android:textSize="18sp"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="134dp"
             tools:layout_editor_absoluteY="218dp" />
 
         <Button
-            android:id="@+id/modeAI"
+            android:id="@+id/mode_ai"
             android:layout_width="150dp"
             android:layout_height="55dp"
             android:layout_column="0"
             android:layout_row="1"
             android:background="@drawable/game_set"
             android:onClick="AIClick"
-            android:text="@string/aimode"
+            android:text="@string/mode_ai"
             android:textSize="18sp"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="75dp"

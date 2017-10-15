@@ -7,13 +7,10 @@
     tools:context="org.soraworld.fourchess.mode.PPActivity">
 
     <ImageView
-        android:id="@+id/ai_back"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#00000000"
-        android:contentDescription="@string/gameback"
         android:scaleType="centerCrop"
-        android:src="@drawable/pic05" />
+        android:src="@drawable/pic04" />
 
     <LinearLayout
         android:id="@+id/aibar"

@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">四棋</string>
+    <string name="game">游戏</string>
+    <string name="mode_ai">双人对战</string>
+    <string name="mode_pp">人机对战</string>
 </resources>
